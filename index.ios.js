@@ -3,7 +3,6 @@ import {
   View,
   ScrollView,
   Image,
-  TouchableOpacity
 } from 'react-native';
 //Add a Touchable wrapper for your Image!
 export default class ImageViewZoom extends Component {
@@ -15,9 +14,7 @@ export default class ImageViewZoom extends Component {
           minimumZoomScale={this.props.minimumZoomScale}
           contentContainerStyle={{ alignItems:'center', justifyContent:'center'}}
           centerContent={true}>
-          <TouchableOpacity onPress={this.props.onPress?this.props.onPress:function(){}}>
-            <Image {...this.props}/>
-          </TouchableOpacity>
+          <Image {...this.props}/>
         </ScrollView>
       </View>
     );
